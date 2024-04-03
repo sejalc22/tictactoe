@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> Tic Tac Toe </p>
       </header>
+      <Container>
+        <Row>
+          <Col>
+            <button> 1 </button>
+            <button> 2 </button>
+            <button> 3 </button>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <button> 4 </button>
+            <button> 5 </button>
+            <button> 6 </button>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <button> 7 </button>
+            <button> 8 </button>
+            <button> 9 </button>
+          </Col>
+        </Row>
+        <Row style={{display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+          <button className="reset" style={{width: '100px', borderRadius: '7px', height: '50px'}}> Reset </button>
+        </Row>
+      </Container>
     </div>
   );
 }
